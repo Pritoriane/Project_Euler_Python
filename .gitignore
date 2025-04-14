@@ -130,11 +130,13 @@ celerybeat.pid
 # Environments
 .env
 .venv
-env/
+.vscode
+.gitignore
 venv/
 ENV/
 env.bak/
 venv.bak/
+
 
 # Spyder project settings
 .spyderproject
