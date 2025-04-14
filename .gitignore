@@ -132,10 +132,12 @@ celerybeat.pid
 .venv
 .vscode
 .gitignore
+.DS_Store
 venv/
 ENV/
 env.bak/
 venv.bak/
+
 
 
 # Spyder project settings
