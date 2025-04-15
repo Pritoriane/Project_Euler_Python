@@ -9,7 +9,8 @@ def main():
         '''
         Function closes the window when the button is clicked.
         :param: Not
-        :return: Not'''
+        :return: Not
+        '''
         window.destroy()
         print("Closed")
 

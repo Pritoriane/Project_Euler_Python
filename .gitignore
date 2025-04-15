@@ -132,6 +132,7 @@ celerybeat.pid
 .venv
 .vscode
 .gitignore
+.pylintrc
 venv/
 ENV/
 env.bak/
