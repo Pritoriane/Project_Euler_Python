@@ -6,6 +6,10 @@ from tkinter import ttk
 
 def main():
     def finish():
+        '''
+        Function closes the window when the button is clicked.
+        :param: Not
+        :return: Not'''
         window.destroy()
         print("Closed")
 
