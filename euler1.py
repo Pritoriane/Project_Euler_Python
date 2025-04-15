@@ -7,7 +7,7 @@ from tkinter import ttk
 def main():
     def finish():
         '''
-        Function closes the window when the button is clicked.
+        Function closes the window when the button is clicked.\n
         :param: Not
         :return: Not
         '''
