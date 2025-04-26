@@ -14,21 +14,12 @@ class App(CTk.CTk):
         self.resizable(False, False)
         self.my_font = CTk.CTkFont(family="Times New Roman", size=24)
 
-        # Настройка внешнего вида и темы GUI-окна
+        # Customizing the appearance and theme of the GUI window
         CTk.set_appearance_mode("dark")
         CTk.set_default_color_theme("green")
 
-        # configuring the location of the container using grid
-        # container.grid_rowconfigure(0, weight=1)
-        # container.grid_columnconfigure(0, weight=1)
-
         self.frame1 = CTk.CTkFrame(
-            master=self,
-            # font=('Helvetica', 17),
-            # text_color='#006400',
-            #bg_color="#FF00FF",
-            #fg_color="#87CEEB",
-        )
+            master=self)
         self.frame1.grid(row=0, column=0)
 
         self.lbn = CTk.CTkLabel(
@@ -77,45 +68,6 @@ class App(CTk.CTk):
         self.withdraw() # closing the active window
         self.destroy() # application closing
         print("Closed")
-
-        # self.column_frame1 = CTk.CTkFrame(master=self,
-        #                                   border_color='#00BFFF',)
-        # self.column_frame1.grid(row=0, column=0)
-
-        # self.label1 = CTk.CTkLabel(master=self.column_frame1,
-        #                            text='_1_',
-        #                            width=50,
-        #                            )
-        # self.label1.grid(row=0, column=0,)
-
-        # self.label2 = CTk.CTkLabel(master=self.column_frame1,
-        #                            text='_2_',
-        #                            width=50,
-        #                            fg_color='#808000')
-        # self.label2.grid(row=0, column=1)
-
-        # self.label3 = CTk.CTkLabel(master=self.column_frame1, text='_3_', width=50)
-        # self.label3.grid(row=0, column=3)
-
-        # self.column_frame2 = CTk.CTkFrame(master=self,
-        #                                   fg_color='#00FF00')
-        # self.column_frame2.grid(row=1, column=0)
-
-        # self.label4 = CTk.CTkLabel(master=self.column_frame2,
-        #                            text='_4_',
-        #                            width=50)
-        # self.label4.grid(row=0, column=0)
-
-        # self.label5 = CTk.CTkLabel(master=self.column_frame2,
-        #                            text='_5_',
-        #                            width=50)
-        # self.label5.grid(row=0, column=1)
-
-        # self.label6 = CTk.CTkLabel(master=self.column_frame2,
-        #                            text='_6_',
-        #                            width=50)
-        # self.label6.grid(row=0, column=2)
-
 
 if __name__ == "__main__":
     app = App()
