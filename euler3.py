@@ -18,8 +18,7 @@ class App(CTk.CTk):
         CTk.set_appearance_mode("dark")
         CTk.set_default_color_theme("green")
 
-        self.frame1 = CTk.CTkFrame(
-            master=self)
+        self.frame1 = CTk.CTkFrame(master=self)
         self.frame1.grid(row=0, column=0)
 
         self.lbn = CTk.CTkLabel(
@@ -39,17 +38,17 @@ class App(CTk.CTk):
         )
         self.lbn.grid(row=1, column=0, sticky="nsew", pady=10, padx=10)
 
-        self.btn = CTk.CTkButton(master=self.frame1,
-                                 text='Click me',
-                                 command=self.finish)
+        self.btn = CTk.CTkButton(
+            master=self.frame1, text="Click me", command=self.finish
+        )
         self.btn.grid(row=2, column=0, pady=60)
 
     def calculation(self, n):
-        '''
+        """
         prime factor.\n
         :param: n - given number
-        :return: list of prime divisors 
-        '''
+        :return: list of prime divisors
+        """
         answer = []
         r = math.ceil(math.sqrt(n))
         for i in range(3, r):
@@ -58,16 +57,17 @@ class App(CTk.CTk):
                     answer.append(i)
         print(answer)
         return answer
-    
+
     def finish(self):
         """
         Function closes the window when the button is clicked.\n
         :param: Not
         :return: Not
         """
-        self.withdraw() # closing the active window
-        self.destroy() # application closing
+        self.withdraw()  # closing the active window
+        self.destroy()  # application closing
         print("Closed")
+
 
 if __name__ == "__main__":
     app = App()
