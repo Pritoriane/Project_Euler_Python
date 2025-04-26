@@ -1,12 +1,14 @@
-import tkinter as tk
 import math
-from tkinter import *
-from typing import Self
 import customtkinter as CTk
 
 
 class App(CTk.CTk):
     def __init__(self):
+        '''
+        The main body of the program is a function.\n
+        :param: None
+        :return: None
+        '''
         super().__init__()
 
         self.title("Project Euler. Task 3.")
