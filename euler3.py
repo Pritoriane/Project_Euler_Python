@@ -4,17 +4,17 @@ import customtkinter as CTk
 
 class App(CTk.CTk):
     def __init__(self):
-        '''
+        """
         The main body of the program is a function.\n
         :param: None
         :return: None
-        '''
+        """
         super().__init__()
 
         self.title("Project Euler. Task 3.")
         self.geometry("700x400")
         self.resizable(False, False)
-        self.my_font = CTk.CTkFont(family="Times New Roman", size=24)
+        self.my_font = CTk.CTkFont(family="Times New Roman", size=23)
 
         # Customizing the appearance and theme of the GUI window
         CTk.set_appearance_mode("dark")
@@ -26,7 +26,7 @@ class App(CTk.CTk):
         self.lbn = CTk.CTkLabel(
             master=self.frame1,
             text="What is the largest prime factor of the number 600851475143 ?",
-            font=("Helvetica", 17),
+            font=self.my_font,
             text_color="#808000",
             width=700,
         )
@@ -35,7 +35,7 @@ class App(CTk.CTk):
         self.lbn = CTk.CTkLabel(
             master=self.frame1,
             text=(f"Task response: {max(self.calculation(600851475143))}."),
-            font=("Helvetica", 17),
+            font=self.my_font,
             text_color="#808000",
         )
         self.lbn.grid(row=1, column=0, sticky="nsew", pady=10, padx=10)
