@@ -1,1 +1,1 @@
-Learning Python in parallel with solving “Euler project” problems.
+Learning Python and in parallel solving problems of the “Euler project”.
