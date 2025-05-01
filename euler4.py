@@ -1,7 +1,9 @@
 import customtkinter as CTk
 
 
+
 class App(CTk.CTk):
+    
     def __init__(self):
         """
         The main body of the program is a function.\n
@@ -31,7 +33,7 @@ class App(CTk.CTk):
         )
         self.lbn.grid(row=0, column=0, pady=100)
 
-        self.rezult = self.polindrom()
+        self.polindrom()
 
         self.lbn1 = CTk.CTkLabel(
             master=self.frame1,
@@ -46,26 +48,28 @@ class App(CTk.CTk):
         )
         self.btn.grid(row=2, column=0, pady=10)
 
+    
     def polindrom(self):
         """
         Searches for all palindromes of three-digit numbers.\n
         :param: self
-        :return: max_key - maximum number of palindromes,
-                 max_key_value - list of products of numbers.
+        :return: 
+        max_key - maximum number of palindromes,
+        max_key_value - list of products of numbers.
         """
         is_poly = dict()
-        for i in range(100, 999):
-            for i2 in range(100, 999):
-                valye = i * i2
+        for first_three_digit_number in range(100, 999):
+            for second_three_digit_number in range(100, 999):
+                valye = first_three_digit_number * second_three_digit_number
                 poly = str(valye) == str(valye)[::-1]
                 if poly is True:
-                    print(f"{int(valye)} = {i} * {i2}")
-                    pairs = [(valye, (i, i2))]
-                    is_poly.update(pairs)
+                    print(f"{int(valye)} = {first_three_digit_number} * {second_three_digit_number}")
+                    other = [(valye, (first_three_digit_number, second_three_digit_number))]
+                    is_poly.update(other)
         print(is_poly)
         print(max(dict.keys(is_poly)))
-        self.max_key = int(max(dict.keys(is_poly)))
-        self.max_key_value = is_poly[self.max_key]
+        self.max_key = int(max(dict.keys(is_poly))) # biggest clue in the dictionary
+        self.max_key_value = is_poly[self.max_key] # key values
         print(self.max_key_value)
         return self.max_key, self.max_key_value
 
