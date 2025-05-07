@@ -1,5 +1,4 @@
 import customtkinter as CTk
-#
 
 
 class MyFrame(CTk.CTkScrollableFrame):
@@ -62,9 +61,7 @@ class App(CTk.CTk):
         self.res_height = self.winfo_screenheight()  # window center calculation
 
         self.x = (self.res_width // 2) - (self.width // 2)  # window center calculation
-        self.y = (self.res_height // 2) - (
-            self.height // 2
-        )  # window center calculation
+        self.y = (self.res_height // 2) - (self.height // 2)  # window center calculation
 
         self.geometry(f"{self.width}x{self.height}+{self.x}+{self.y}")
         self.resizable(False, False)
@@ -163,11 +160,11 @@ class App(CTk.CTk):
         # ----Functions-------------------------------------
 
     def calculation(self):
-        '''
+        """
         Basic calculation\n
         :param: self
         :return: sequence - maximum value of multiplied numbers.
-        '''
+        """
         start_cutoff = 0
         end_cutoff = 13
         sequence = 0
@@ -182,7 +179,9 @@ class App(CTk.CTk):
                 self.sequence_sp = self.list_of_numbers[start_cutoff:end_cutoff]
             start_cutoff += 1
             end_cutoff += 1
-            self.sequence_sp = [*map(int, self.sequence_sp)] # from list(str) to list(int)
+            self.sequence_sp = [
+                *map(int, self.sequence_sp)
+            ]  # from list(str) to list(int)
 
         return format(sequence, ",d").replace(",", ".")
 
