@@ -72,13 +72,13 @@ class App(CTk.CTk):
         )
         self.lbn_triple.grid(row=2, column=0)
 
-        self.lbn_triple = CTk.CTkLabel(
+        self.lbn_calculation = CTk.CTkLabel(
             master=self.frame,
             text=f"Answer: (a * b * c) = {self.calculation()}.",
             font=self.my_font_Futura,
             text_color="#FFBA00",
         )
-        self.lbn_triple.grid(row=3, column=0)
+        self.lbn_calculation.grid(row=3, column=0)
 
         self.progressbar = CTk.CTkProgressBar(
             master=self.frame,
@@ -113,10 +113,15 @@ class App(CTk.CTk):
         if self.node == "dark":
             CTk.set_appearance_mode("light")
             self.node = "light"
+            self.lbn.configure(text_color='#9303A7')
+            self.lbn_triple.configure(text_color='#9303A7')
+            self.lbn_calculation.configure(text_color='#9303A7')
         else:
             CTk.set_appearance_mode("dark")
             self.node = "dark"
-		
+            self.lbn.configure(text_color='#FFBA00')
+            self.lbn_triple.configure(text_color='#FFBA00')
+            self.lbn_calculation.configure(text_color='#FFBA00')
 
 
     def calculation(self):
