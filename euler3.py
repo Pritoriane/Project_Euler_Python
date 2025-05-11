@@ -34,7 +34,7 @@ class App(CTk.CTk):
 
         self.lbn = CTk.CTkLabel(
             master=self.frame1,
-            text=(f"Task response: {max(self.calculation(600851475143))}."),
+            text=(f"Task response: {max(self.calculation(600_851_475_143))}."),
             font=self.my_font,
             text_color="#808000",
         )
