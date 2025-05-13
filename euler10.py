@@ -24,7 +24,7 @@ class Calculation(CTk.CTkBaseClass):
 
     def calculate(self):
         result = []
-        for number in range(2, 2_000):
+        for number in range(2, 2_000_000):
             if self.is_prime(number):
                 result.append(number)
         result = sum(result)
