@@ -196,8 +196,7 @@ class App(CTk.CTk):
         self.max_product = self.my_arr.result
 
         self.frame = CTk.CTkFrame(
-            master=self, height=self.height, border_width=5, border_color="#87EA00"
-        )
+            master=self, height=self.height)
         self.frame.grid(row=0, column=0, sticky="nsew")
         self.frame.grid_configure()
         self.frame.grid_rowconfigure(0, weight=1)
@@ -233,7 +232,7 @@ class App(CTk.CTk):
 
         self.lbn_calculate = CTk.CTkLabel(
             master=self.frame,
-            text=f"Maximum product: {self.max_product}",
+            text=f"Maximum product: {format(self.max_product, ',d').replace(',', '.')}",
             font=self.my.my_font_Futura,
             text_color="#DAA520",
             # command=self.my_arr.vid_rez()
