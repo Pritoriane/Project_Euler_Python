@@ -164,7 +164,7 @@ class App(CTk.CTk):
         self.geometry(f"{self.width}x{self.height}+{self.x}+{self.y}")
         self.resizable(False, False)
         
-        # Настройка сетки
+        # Customizing the grid
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
         
