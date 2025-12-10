@@ -42,5 +42,3 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/qt/qt-original.svg" width="40" height="40"/>&nbsp;
 </div>
 
----
----
