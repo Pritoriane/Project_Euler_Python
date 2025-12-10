@@ -34,11 +34,15 @@
 <br>
 <br>
 <br>
+
 ---
 ---
+
 <div align=center>
   <img src="https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/python/python-original-wordmark.svg" width="40" height="40"/>&nbsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/vscode/vscode-original-wordmark.svg" width="40" height="40"/>&nbsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/qt/qt-original.svg" width="40" height="40"/>&nbsp;
 </div>
 
+---
+---
