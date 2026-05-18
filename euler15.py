@@ -43,7 +43,7 @@ class MainWindow(QMainWindow):
         self.statusBar().showMessage("Ready")
 
     def setup_pages(self):
-        """Создаём две страницы: условие и не вычисления"""
+        """Создаём две страницы: условие и вычисления"""
         #--*-- page 1 --*--
         self.page_task = QWidget()
         task_layout = QVBoxLayout(self.page_task)
