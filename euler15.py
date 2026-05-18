@@ -25,6 +25,7 @@ class MainWindow(QMainWindow):
         self.resize(700,500)
 
         self.thread = None
+        self.worker = None
 
         self.setup_central_widget()
         self.setup_pages()
@@ -219,15 +220,22 @@ class MainWindow(QMainWindow):
         self.statusBar().showMessage('Working...')
 
         # Создаём поток
-        self.thread = WorkerThread(limit=20)
+        self.thread = QThread()
+        self.worker = WaysWorker(limit=20)
+        self.worker.moveToThread(self.thread)
+
+        self.thread.started.connect(self.worker.run)
 
         # Подключаем сигналы worker к методам GUI
-        self.thread.worker.finished.connect(self.computation_finished)
-        self.thread.worker.error.connect(self.computation_error)
+        self.worker.finished.connect(self.computation_finished)
+        self.worker.error.connect(self.computation_error)
+
+        self.worker.finished.connect(self.thread.quit)
+        self.worker.error.connect(self.thread.quit)
 
         # Когда поток завершится, освобождаем ресурсы
         self.thread.finished.connect(self.thread.deleteLater)
-
+        self.thread.finished.connect(self.worker.deleteLater)
         self.thread.finished.connect(self.thread_finished_cleanup)
 
         # Запускаем поток
@@ -240,7 +248,7 @@ class MainWindow(QMainWindow):
         """ Cancellation of calculations """
 
         if self.thread and self.thread.isRunning():
-            self.thread.stop()
+            self.worker.stop()
             self.result_box.appendPlainText("Cancellation requested...")
             self.statusBar().showMessage("Cancelling...")
 
@@ -260,7 +268,7 @@ class MainWindow(QMainWindow):
         self.button_cancel.setEnabled(False)
         self.button_back.setEnabled(True)
 
-        self.thread = None
+        #self.thread = None
 
     @Slot(object)
     def computation_finished(self, number):
@@ -314,41 +322,6 @@ class  WaysWorker(QObject):
 
         except Exception as e:
             self.error.emit(str(e))
-
-
-
-#--*-- ПОТОК: оболочка вокруг worker --*--
-class WorkerThread(QThread):
-    """
-    Отдельный QThread нужен, чтобы GUI не зависал.
-    """
-
-    def __init__(self, limit=20 ):
-        super().__init__()
-
-        # Создаём worker
-        self.worker = WaysWorker(limit)
-        self.worker.moveToThread(self)
-
-        # Когда поток запускается, вызывается run()
-        self.started.connect(self.worker.run)
-
-        # Когда worker заканчивает, поток можно завершить
-        self.worker.finished.connect(self.quit)
-        self.worker.error.connect(self.quit)
-
-        self.finished.connect(self.worker.deleteLater)
-
-    def stop(self):
-        # Проксируем остановку внутрь worker
-        self.worker.stop()
-
-        
-
-
-
-
-
 
 
 if __name__=="__main__":
