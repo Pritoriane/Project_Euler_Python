@@ -3,7 +3,6 @@
 </div>
 
 ---
-
 # Project Euler — my learning journey 🚀
 
 ### Learning **Python**, algorithms, mathematical thinking and solving **Project Euler** tasks.
