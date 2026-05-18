@@ -40,7 +40,7 @@ class MainWindow(QMainWindow):
         self.main_layout = QVBoxLayout(self.central)
         self.stacked = QStackedLayout()
         self.main_layout.addLayout(self.stacked)
-        self.statusBar().showMessage("What ?")
+        self.statusBar().showMessage("Ready")
 
     def setup_pages(self):
         """Создаём две страницы: условие и не вычисления"""
