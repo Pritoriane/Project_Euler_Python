@@ -291,7 +291,8 @@ class MainWindow(QMainWindow):
         
     @Slot()
     def thread_finished_cleanup(self):
-     self.thread = None
+        self.thread = None
+        self.worker = None 
 
 class  WaysWorker(QObject):
     finished = Signal(object)
