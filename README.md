@@ -42,12 +42,13 @@
 ![Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Pritoriane&theme=tokyonight)
 
 
-### Coding Time This Week:
-[![wakatime](https://wakatime.com/badge/user/Pritoriane.svg)](https://wakatime.com/@Pritoriane)
+### Coding Time
 
-### Detailed Coding Stats:
+[![wakatime](https://wakatime.com/badge/user/1c4d9fb8-aceb-4a37-ab0b-03acbd007b56.svg)](https://wakatime.com/@1c4d9fb8-aceb-4a37-ab0b-03acbd007b56)
+
+### Detailed Coding Stats
+
 [![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Pritoriane&theme=dark&layout=compact)](https://wakatime.com/@Pritoriane)
-
 ---
 
 ## 🧰 Toolbox
