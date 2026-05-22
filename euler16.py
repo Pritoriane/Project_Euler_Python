@@ -16,6 +16,7 @@ from PySide6.QtWidgets import (
     QPushButton,
 )
 from PySide6.QtCore import Qt, Signal, Slot, QObject, QThread
+from PySide6.QtWidgets import QGraphicsDropShadowEffect
 
 
 # --*-- Main Window --*--
@@ -88,7 +89,7 @@ class MainWindow(QMainWindow):
 
         task_layout.addStretch()
 
-        self.button_calc = QPushButton("Do the calculation...     \U00002705")
+        self.button_calc = GlowButton("Do the calculation...     \U00002705")
         task_layout.addWidget(self.button_calc)
 
         # --*-- Page 2 --*--
@@ -107,14 +108,14 @@ class MainWindow(QMainWindow):
         # --*-- button panel --*--
         button_layout = QHBoxLayout()
 
-        self.button_start = QPushButton("Start      \U00002705")
+        self.button_start = GlowButton("Start      \U00002705")
         button_layout.addWidget(self.button_start)
 
-        self.button_cancel = QPushButton("Cancel   \U0000274C")
+        self.button_cancel = GlowButton("Cancel   \U0000274C")
         self.button_cancel.setEnabled(False)
         button_layout.addWidget(self.button_cancel)
 
-        self.button_back = QPushButton("\U00002B05  Back")
+        self.button_back = GlowButton("\U00002B05  Back")
         button_layout.addWidget(self.button_back)
 
         calc_layout.addLayout(button_layout)
@@ -351,6 +352,32 @@ class MainWindow(QMainWindow):
 
         self.thread = None
         self.worker = None
+
+
+class GlowButton(QPushButton):
+
+    def __init__(self, text):
+        super().__init__(text)
+
+        self.shadow = QGraphicsDropShadowEffect()
+        
+        self.shadow.setBlurRadius(15)
+        self.shadow.setOffset(2, 2)
+
+        self.setGraphicsEffect(self.shadow)
+
+    def enterEvent(self, event):
+
+        self.shadow.setBlurRadius(40)
+        
+        super().enterEvent(event)
+
+    def leaveEvent(self, event):
+        self.shadow.setBlurRadius(15)
+
+        super().leaveEvent(event)
+
+
 
 
 class WaysWorker(QObject):
