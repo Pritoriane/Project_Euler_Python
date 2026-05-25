@@ -34,10 +34,13 @@
 
 ## 🔥 My stats
 
-## GitHub Activity:
+## 🔥 Contribution Activity
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Pritoriane&theme=dark&background=000000)](https://git.io/streak-stats)
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=Pritoriane&theme=tokyonight&hide_border=true"/>
+</p>
 
+---
 ## Languages & Activity:
 ![Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Pritoriane&theme=tokyonight)
 
@@ -48,14 +51,6 @@
   <img src="https://github-readme-stats.vercel.app/api?username=Pritoriane&show_icons=true&theme=tokyonight&hide_border=true" height="180"/>
   
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pritoriane&layout=compact&theme=tokyonight&hide_border=true" height="180"/>
-</p>
-
----
-
-## 🔥 Contribution Activity
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=Pritoriane&theme=tokyonight&hide_border=true"/>
 </p>
 
 ---
