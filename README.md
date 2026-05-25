@@ -42,14 +42,27 @@
 ![Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Pritoriane&theme=tokyonight)
 
 
-### Coding Time
+## 📊 GitHub Stats
 
-[![wakatime](https://wakatime.com/badge/user/1c4d9fb8-aceb-4a37-ab0b-03acbd007b56.svg)](https://wakatime.com/@1c4d9fb8-aceb-4a37-ab0b-03acbd007b56)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Pritoriane&show_icons=true&theme=tokyonight&hide_border=true" height="180"/>
+  
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pritoriane&layout=compact&theme=tokyonight&hide_border=true" height="180"/>
+</p>
 
-### Detailed Coding Stats
-
-[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Pritoriane&theme=dark&layout=compact)](https://wakatime.com/@Pritoriane)
 ---
+
+## 🔥 Contribution Activity
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=Pritoriane&theme=tokyonight&hide_border=true"/>
+</p>
+
+---
+
+## 📈 Activity Graph
+
+[![Andrey's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Pritoriane&theme=tokyo-night)](https://github.com/Pritoriane)
 
 ## 🧰 Toolbox
 <div align="center">
