@@ -1,7 +1,6 @@
 import sys
 import socket
 import struct
-import time
 from datetime import datetime, timezone, timedelta
 from PySide6.QtCore import QTimer
 from PySide6.QtWidgets import (
